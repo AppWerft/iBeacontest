@@ -25,18 +25,7 @@ if (Ti.Platform.name == "android") {
 		major : 0,
 		minor : 0
 	});
-	/*
-	beacons.addEventListener("enteredRegion", function(e) {
-		console.log("identifer: " + e.identifier);
-		console.log("uuid: " + e.uuid);
-		console.log("major: " + e.major);
-		console.log("minor: " + e.minor);
-		console.log("proximity: " + e.proximity);
-		console.log("accuracy: " + e.accuracy);
-		console.log("rssi: " + e.rssi);
-		console.log("power: " + e.power);
-	});*/
-
+	
 } else {
 	label.text = "liferay.beacons not supported on " + Ti.Platform.name;
 }
