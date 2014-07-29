@@ -11,10 +11,7 @@ function beaconsProximityCallback(e) {
 
 var win = Ti.UI.createWindow({
 	backgroundColor : 'white'
-});
-var label = Ti.UI.createLabel();
-win.add(label);
-win.open();
+}).open(); 
 
 if (Ti.Platform.name == "android") {
 	var beacons = require('com.liferay.beacons');
