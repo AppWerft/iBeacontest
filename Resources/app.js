@@ -1,4 +1,3 @@
-
 var win = Ti.UI.createWindow({
 	backgroundColor : 'white'
 }).open();
@@ -15,7 +14,6 @@ if (Ti.Platform.name == "android") {
 	TiBeacons.addEventListener("enteredRegion", function(e) {
 		console.log(e);
 	});
-
 
 } else {
 	var TiBeacons = require('org.beuckman.tibeacons');
@@ -36,8 +34,11 @@ if (Ti.Platform.name == "android") {
 		major : 1,
 		minor : 2
 	});
-	TiBeacons.addEventListener("enteredRegion", alert);
-	TiBeacons.addEventListener("exitedRegion", alert);
-	TiBeacons.addEventListener("determinedRegionState", alert);
+	//TiBeacons.addEventListener("enteredRegion", alert);
+	//TiBeacons.addEventListener("exitedRegion", alert);
+	TiBeacons.addEventListener("determinedRegionState", function(e) {
+		alert(e.regionState);
+		console.log(e);
+	});
 
 }

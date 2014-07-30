@@ -1,31 +1,31 @@
-iBeacons in Titanium world
-==========================
+iBeacons & Titanium 
+===================
 ![](http://t3n.de/news/wp-content/uploads/2014/06/ibeacon-verschiedene-bauformen-595x909.jpg)
 __Bild: T3N__
 
 
-++Devices as iBeacons:++
+Devices as iBeacons:
+--------------------
 
-iPhone/iPad:
+### iPhone/iPad:
 AirLocate is a iPhoneApp to transform your iPhone into a beacon. You must follow this [HOWTO](https://github.com/AppWerft/iBeacontest/blob/master/How-to-Configure-your-iPhone-as-an-iBeacon-Transmitter.pdf?raw=true) tobuild it on your machine.
 
-Android:
+### Android:
 [Stackoverflow: UPDATE: This is now possible on rooted Android 4.4.3 devices](http://stackoverflow.com/questions/19602913/can-an-android-device-act-as-an-ibeacon)
 
-OSX:
+### OSX:
 On newer osx you can use [Maverick as an iBeacon]() to create a iBeacon. You can download and install OSX-binary [here](https://github.com/AppWerft/iBeacontest/blob/master/BeaconOSX.zip). 
 
 iBeaconScanner:
-
-iPhone:
+---------------
+### iPhone:
 AirLocate (above)
 
-Android:
+#### Android:
 a lot of ;-))
 
-
-
-Entries in tiapp.xml:
+Confifuration of manifest/plist
+-------------------------------
 ~~~
 <ios>
         <plist>
