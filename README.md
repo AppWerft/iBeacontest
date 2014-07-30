@@ -13,7 +13,7 @@ Android:
 [Stackoverflow: UPDATE: This is now possible on rooted Android 4.4.3 devices](http://stackoverflow.com/questions/19602913/can-an-android-device-act-as-an-ibeacon)
 
 OSX:
-On newer osx you can use [Maverick as an iBeacon]() to create a iBeacon
+On newer osx you can use [Maverick as an iBeacon]() to create a iBeacon. You can download and install OSX-binary [here](https://github.com/AppWerft/iBeacontest/blob/master/BeaconOSX.zip). 
 
 iBeaconScanner:
 
