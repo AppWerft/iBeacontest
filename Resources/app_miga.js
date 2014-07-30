@@ -12,7 +12,7 @@
 	function onSuccess(e) {
 		console.log('SUCCESS');
 		Ti.API.info(JSON.stringify(e));
-	}
+	}  
 
 	function onRegion(e) {
 		console.log('REGION');
