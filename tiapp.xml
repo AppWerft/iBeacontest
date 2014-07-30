@@ -16,28 +16,25 @@
     <ios>
         <plist>
             <dict>
-                <key>UISupportedInterfaceOrientations~iphone</key>
+                <key>UIBackgroundModes</key>
                 <array>
-                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>location</string>
+                    <string>bluetooth-central</string>
                 </array>
-                <key>UISupportedInterfaceOrientations~ipad</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
-                    <string>UIInterfaceOrientationLandscapeLeft</string>
-                    <string>UIInterfaceOrientationLandscapeRight</string>
-                </array>
-                <key>UIRequiresPersistentWiFi</key>
-                <false/>
-                <key>UIPrerenderedIcon</key>
-                <false/>
-                <key>UIStatusBarHidden</key>
-                <false/>
-                <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
             </dict>
         </plist>
     </ios>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest package="de.appwerft.ibeacontest">
             <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19"/>
@@ -57,6 +54,7 @@
     <modules>
         <module platform="android">com.liferay.beacons</module>
         <module platform="android">miga.tibeacon</module>
+        <module platform="iphone">org.beuckman.tibeacons</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
