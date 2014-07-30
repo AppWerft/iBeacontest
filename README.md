@@ -8,7 +8,9 @@ Devices as iBeacons:
 --------------------
 
 ### iPhone/iPad:
-AirLocate is a iPhoneApp to transform your iPhone into a beacon. You must follow this [HOWTO](https://github.com/AppWerft/iBeacontest/blob/master/doku/How-to-Configure-your-iPhone-as-an-iBeacon-Transmitter.pdf?raw=true) tobuild it on your machine.
+AirLocate is a iPhoneApp to transform your iPhone into a beacon. You must follow this [HOWTO](https://github.com/AppWerft/iBeacontest/blob/master/doku/How-to-Configure-your-iPhone-as-an-iBeacon-Transmitter.pdf?raw=true) 
+to build it on your machine.
+
 ![](https://github.com/AppWerft/iBeacontest/blob/master/doku/airlocate.png)
 ### Android:
 [Stackoverflow: UPDATE: This is now possible on rooted Android 4.4.3 devices](http://stackoverflow.com/questions/19602913/can-an-android-device-act-as-an-ibeacon)
