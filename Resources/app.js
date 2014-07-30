@@ -21,7 +21,7 @@ if (Ti.Platform.name == "android") {
 		uuid : "00000000-0000-0000-0000-000000000000",
 		identifier : "Test Maverick-Beacon",
 	});
-
+/*
 	TiBeacons.startRangingForBeacons({
 		uuid : "00000000-0000-0000-0000-000000000001",
 		identifier : "Test Region 2 (group-specific)",
@@ -33,7 +33,7 @@ if (Ti.Platform.name == "android") {
 		identifier : "Test Region 3 (device-specific)",
 		major : 1,
 		minor : 2
-	});
+	});*/
 	//TiBeacons.addEventListener("enteredRegion", alert);
 	//TiBeacons.addEventListener("exitedRegion", alert);
 	TiBeacons.addEventListener("determinedRegionState", function(e) {
