@@ -21,7 +21,7 @@ if (Ti.Platform.name == "android") {
 	var TiBeacons = require('org.beuckman.tibeacons');
 	TiBeacons.startMonitoringForRegion({
 		uuid : "00000000-0000-0000-0000-000000000000",
-		identifier : "Test Region 1",
+		identifier : "Test Maverick-Beacon",
 	});
 
 	TiBeacons.startRangingForBeacons({
