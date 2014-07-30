@@ -56,6 +56,7 @@
     </android>
     <modules>
         <module platform="android">com.liferay.beacons</module>
+        <module platform="android">miga.tibeacon</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
