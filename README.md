@@ -1,7 +1,11 @@
 iBeacons in Titanium world
 ==========================
 ![](http://t3n.de/news/wp-content/uploads/2014/06/ibeacon-verschiedene-bauformen-595x909.jpg)
-Devices as iBeacons:
+__Bild: T3N__
+
+
+
+++Devices as iBeacons:++
 
 iPhone:
 AirLocate is a iPhoneApp to transform your iPhone into a beacon. You must follow this [HOWTO](https://github.com/AppWerft/iBeacontest/blob/master/How-to-Configure-your-iPhone-as-an-iBeacon-Transmitter.pdf?raw=true) tobuild it on your machine.
