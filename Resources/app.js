@@ -1,44 +1,50 @@
 var win = Ti.UI.createWindow({
 	backgroundColor : 'white'
-}).open();
+});
+win.open();
 
-if (Ti.Platform.name == "android") {
-	var TiBeacons = require('com.liferay.TiBeacons');
-	TiBeacons.setAutoRange(true);
-	TiBeacons.startMonitoringForRegion({
-		identifier : 'Region by UUID and major and minor',
-		uuid : '11111111-2222-3333-4444-555555555555',
-		major : 3,
-		minor : 2
-	});
-	TiBeacons.addEventListener("enteredRegion", function(e) {
-		console.log(e);
-	});
+var TiBeacons = (Ti.Android) //
+		? require('com.liferay.beacons') //
+		: require('org.beuckman.tibeacons');
 
-} else {
-	var TiBeacons = require('org.beuckman.tibeacons');
-	TiBeacons.startMonitoringForRegion({
-		uuid : "00000000-0000-0000-0000-000000000000",
-		identifier : "Test Maverick-Beacon",
-	});
+TiBeacons.startMonitoringForRegion({
+	uuid : "00000000-0000-0000-0000-000000000000",
+	identifier : "Test Maverick-Beacon",
+});
 /*
-	TiBeacons.startRangingForBeacons({
-		uuid : "00000000-0000-0000-0000-000000000001",
-		identifier : "Test Region 2 (group-specific)",
-		major : 1
-	});
+ TiBeacons.startRangingForBeacons({
+ uuid : "00000000-0000-0000-0000-000000000001",
+ identifier : "Test Region 2 (group-specific)",
+ major : 1
+ });
 
-	TiBeacons.startRangingForBeacons({
-		uuid : "00000000-0000-0000-0000-000000000002",
-		identifier : "Test Region 3 (device-specific)",
-		major : 1,
-		minor : 2
-	});*/
-	//TiBeacons.addEventListener("enteredRegion", alert);
-	//TiBeacons.addEventListener("exitedRegion", alert);
-	TiBeacons.addEventListener("determinedRegionState", function(e) {
-		alert(e.regionState);
-		console.log(e);
-	});
+ TiBeacons.startRangingForBeacons({
+ uuid : "00000000-0000-0000-0000-000000000002",
+ identifier : "Test Region 3 (device-specific)",
+ major : 1,
+ minor : 2
+ });*/
+TiBeacons.addEventListener("enteredRegion", function(e) {
+	win.backgroundColor = 'green';
+	console.log(e);
+});
+TiBeacons.addEventListener("exitedRegion", function(e) {
+	win.backgroundColor = 'red';
+	console.log(e);
+});
+TiBeacons.addEventListener("determinedRegionState", function(e) {
+	//alert(e.regionState);
+	switch (e.regionState) {
+	case 'inside':
+		win.backgroundColor = 'green';
+		break;
+	case 'outside':
+		win.backgroundColor = 'red';
+		break;
+	}
+	setTimeout(function() {
+		win.backgroundColor = 'white';
+	}, 2000);
+	console.log(e);
+});
 
-}
