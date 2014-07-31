@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>de.appwerft.ibeacontest</id>
     <name>iBeacontest</name>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <publisher>rainerschleevoigt</publisher>
     <url>http://</url>
     <description>not specified</description>
