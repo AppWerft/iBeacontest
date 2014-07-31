@@ -46,7 +46,9 @@ On newer osx you can use [Maverick as an iBeacon]() to create a iBeacon. You can
 iBeaconScanner:
 ---------------
 ### iPhone:
-AirLocate (above)
+AirLocate (above) or from Appstore: [Locate Beacon](https://itunes.apple.com/us/app/locate-beacon/id738709014?mt=8)
+
+![](http://a2.mzstatic.com/us/r30/Purple4/v4/f1/d4/40/f1d440cb-b252-c1e2-5691-a663df752d71/screen568x568.jpeg)
 
 #### Android:
 a lot of [apps](https://play.google.com/store/search?q=ibeacon&c=apps) ;-))
