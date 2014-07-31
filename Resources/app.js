@@ -1,7 +1,8 @@
 var win = Ti.UI.createWindow({
-	backgroundColor : 'white'
+	backgroundImage : '/default.png',
+	fullscreen : true,
+	exitOnClose : true
 });
-win.open();
 
 var TiBeacons = (Ti.Android)//
 ? require('com.liferay.beacons')//
@@ -29,14 +30,15 @@ setTimeout(function() {
 		setTimeout(function() {
 			win.backgroundColor = 'white';
 		}, 2000);
-		console.log(e);
+		
 	});
 
 	TiBeacons.startMonitoringForRegion({
 		uuid : "00000000-0000-0000-0000-000000000000",
 		identifier : "Test Maverick-Beacon",
 	});
-}, 5000);
+}, 500);
+win.open();
 /*
  TiBeacons.startRangingForBeacons({
  uuid : "00000000-0000-0000-0000-000000000001",
