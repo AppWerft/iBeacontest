@@ -15,6 +15,7 @@ setTimeout(function() {
 		win.backgroundColor = 'red';
 		console.log(e);
 	});
+	Ti.Media.vibrate();
 	TiBeacons.addEventListener("determinedRegionState", function(e) {
 		//alert(e.regionState);
 		switch (e.regionState) {
@@ -35,7 +36,7 @@ setTimeout(function() {
 		uuid : "00000000-0000-0000-0000-000000000000",
 		identifier : "Test Maverick-Beacon",
 	});
-}, 10000);
+}, 5000);
 /*
  TiBeacons.startRangingForBeacons({
  uuid : "00000000-0000-0000-0000-000000000001",
