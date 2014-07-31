@@ -3,6 +3,22 @@ iBeacons & Titanium
 ![](http://t3n.de/news/wp-content/uploads/2014/06/ibeacon-verschiedene-bauformen-595x909.jpg)
 __Bild: T3N__
 
+How it works?
+-------------
+
+Beacons use only the advertisement channel. As the “beacon” name suggests, they transmit packets of data in regular intervals, and this data can be then picked up by devices like smartphones. Hence iBeacons are simply a specific usage of BLE advertisements, with some additional support on the iOS side.
+~~~~
+02 01 06 1A FF 4C 00 02 15: iBeacon prefix (fixed)
+B9 40 7F 30 F5 F8 46 6E AF F9 25 55 6B 57 FE 6D: proximity UUID (here: Estimote’s fixed UUID)
+00 49: major
+00 0A: minor
+C5: 2’s complement of measured TX power
+~~~
+
+![](http://www.warski.org/blog/wp-content/uploads/2014/01/bluetooth-le-ibeacon-packet2-300x144.png)
+
+
+
 
 Devices as iBeacons:
 --------------------
