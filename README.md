@@ -86,20 +86,23 @@ Configuration of manifest/plist
 and for Android:
 ~~~
 <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest package="de.appwerft.ibeacontest">
+	<manifest package="de.appwerft.ibeacontest">
             <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19"/>
             <uses-permission android:name="android.permission.BLUETOOTH"/>
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-            <service android:enabled="true" android:exported="true"
-                android:isolatedProcess="false" android:label="iBeacon" android:name="com.radiusnetworks.ibeacon.service.IBeaconService"/>
-            <service android:enabled="true" android:name="com.radiusnetworks.ibeacon.IBeaconIntentProcessor">
-                <meta-data android:name="background" android:value="true"/>
-                <intent-filter android:priority="1">
-                    <action android:name="de.appwerft.ibeacontest.DID_RANGING"/>
-                    <action android:name="de.appwerft.ibeacontest.DID_MONITORING"/>
-                </intent-filter>
-            </service>
+            <application>
+                <service android:enabled="true" android:exported="true"
+                    android:isolatedProcess="false"
+                    android:label="iBeacon" android:name="com.radiusnetworks.ibeacon.service.IBeaconService"/>
+                <service android:enabled="true" android:name="com.radiusnetworks.ibeacon.IBeaconIntentProcessor">
+                    <meta-data android:name="background" android:value="true"/>
+                    <intent-filter android:priority="1">
+                        <action android:name="de.appwerft.ibeacontest.DID_RANGING"/>
+                        <action android:name="de.appwerft.ibeacontest.DID_MONITORING"/>
+                    </intent-filter>
+                </service>
+            </application>
         </manifest>
-    </android>
+</android>
 ~~~
     
