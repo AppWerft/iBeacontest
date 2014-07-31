@@ -55,7 +55,7 @@ a lot of [apps](https://play.google.com/store/search?q=ibeacon&c=apps) ;-))
 ![](https://lh4.ggpht.com/RjEtnJqwOh-Ozg6kgQQaljmWM6tb4jYglOqmAIXb5jfPw2GM7xgltbZlLnAXLQOGfPE=w100)
 ![](https://lh6.ggpht.com/AageLj4Ae12yYrjUb-E7EsH2SmHXDFEWDc8rsDD36Z3K111kigTaZot-rDaF125jpSI=w100)
 ![](https://lh5.ggpht.com/EuhbJUeNah_dJFV_PBRo2YQQE7G6vWBlvUsLjp0Mc-JZzOn7cprJnoMt6nZ73drKSn4=w100)
-Confifuration of manifest/plist
+Configuration of manifest/plist
 -------------------------------
 ~~~
 <ios>
