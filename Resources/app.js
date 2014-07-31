@@ -3,14 +3,39 @@ var win = Ti.UI.createWindow({
 });
 win.open();
 
-var TiBeacons = (Ti.Android) //
-		? require('com.liferay.beacons') //
-		: require('org.beuckman.tibeacons');
+var TiBeacons = (Ti.Android)//
+? require('com.liferay.beacons')//
+: require('org.beuckman.tibeacons');
+setTimeout(function() {
+	TiBeacons.addEventListener("enteredRegion", function(e) {
+		win.backgroundColor = 'green';
+		console.log(e);
+	});
+	TiBeacons.addEventListener("exitedRegion", function(e) {
+		win.backgroundColor = 'red';
+		console.log(e);
+	});
+	TiBeacons.addEventListener("determinedRegionState", function(e) {
+		//alert(e.regionState);
+		switch (e.regionState) {
+		case 'inside':
+			win.backgroundColor = 'green';
+			break;
+		case 'outside':
+			win.backgroundColor = 'red';
+			break;
+		}
+		setTimeout(function() {
+			win.backgroundColor = 'white';
+		}, 2000);
+		console.log(e);
+	});
 
-TiBeacons.startMonitoringForRegion({
-	uuid : "00000000-0000-0000-0000-000000000000",
-	identifier : "Test Maverick-Beacon",
-});
+	TiBeacons.startMonitoringForRegion({
+		uuid : "00000000-0000-0000-0000-000000000000",
+		identifier : "Test Maverick-Beacon",
+	});
+}, 10000);
 /*
  TiBeacons.startRangingForBeacons({
  uuid : "00000000-0000-0000-0000-000000000001",
@@ -24,27 +49,4 @@ TiBeacons.startMonitoringForRegion({
  major : 1,
  minor : 2
  });*/
-TiBeacons.addEventListener("enteredRegion", function(e) {
-	win.backgroundColor = 'green';
-	console.log(e);
-});
-TiBeacons.addEventListener("exitedRegion", function(e) {
-	win.backgroundColor = 'red';
-	console.log(e);
-});
-TiBeacons.addEventListener("determinedRegionState", function(e) {
-	//alert(e.regionState);
-	switch (e.regionState) {
-	case 'inside':
-		win.backgroundColor = 'green';
-		break;
-	case 'outside':
-		win.backgroundColor = 'red';
-		break;
-	}
-	setTimeout(function() {
-		win.backgroundColor = 'white';
-	}, 2000);
-	console.log(e);
-});
 
