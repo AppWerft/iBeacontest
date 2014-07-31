@@ -21,7 +21,14 @@ What follows is that if you want to experiment with beacons, you don’t really 
 
 Breaking down the iBeacon format
 --------------------------------
+### The proximity UUID 
+(B9 ... 6D in our example), is an identifier which should be used to distinguish your beacons from others. If, for example, beacons where used to present special offers to customers in a chain of stores, all beacons belonging to the chain would have the same proximity UUID. The dedicated iPhone application for that chain would scan in the background for beacons with the given UUID.
 
+### The major number
+ (2 bytes, here: 0×0049, so 73) is used to group a related set of beacons. For example, all beacons in a store will have the same major number. That way the application will know in which specific store the customer is.
+
+#### The minor number
+ (again 2 bytes, here: 0x000A, so 10) is used to identify individual beacons. Each beacon in a store will have a different minor number, so that you know where the customer is exactly.
 Devices as iBeacons:
 --------------------
 
