@@ -17,8 +17,10 @@ C5: 2’s complement of measured TX power
 
 ![](http://www.warski.org/blog/wp-content/uploads/2014/01/bluetooth-le-ibeacon-packet2-300x144.png)
 
+What follows is that if you want to experiment with beacons, you don’t really need any special devices. If you have a newer phone (e.g. iPhone 4S+, SG3+) or a Bluetooth 4 laptop (e.g. Retina MacBook), you can turn any of these devices into an iBeacon transmitter and receiver. For iPhones, see for example the “Locate iB” app in AppStore. For MacOS, see here. And of course, you can use Raspberry Pi as a beacon as well.
 
-
+Breaking down the iBeacon format
+--------------------------------
 
 Devices as iBeacons:
 --------------------
