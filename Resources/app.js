@@ -1,12 +1,11 @@
 var win = Ti.UI.createWindow({
-	backgroundImage : '/default.png',
+	backgroundImage : '/assets/default.png',
 	fullscreen : true,
 	exitOnClose : true
 });
 
-var TiBeacons = (Ti.Android)//
-? require('com.liferay.beacons')//
-: require('org.beuckman.tibeacons');
+var TiBeacons = require('ibeacons_adapter');
+
 setTimeout(function() {
 	TiBeacons.addEventListener("enteredRegion", function(e) {
 		win.backgroundColor = 'green';
